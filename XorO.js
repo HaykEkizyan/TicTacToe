@@ -1,13 +1,13 @@
 let turn = document.getElementById("turn");
 let boxes = document.querySelectorAll("#main div"), X_or_O = 0;
-let selectWinnerBoxes = (b1, b2, b3) => {
+const selectWinnerBoxes = (b1, b2, b3) => {
 	b1.classList.add("win");
 	b2.classList.add("win");
 	b3.classList.add("win");
 	turn.innerHTML = b1.innerHTML + " Won Congrat";
 	turn.style.fontSize = "40px";
 }
-let getWinner = () => {
+const getWinner = () => {
 	let box1 = document.getElementById("box1"),
 		box2 = document.getElementById("box2"),
 		box3 = document.getElementById("box3"),
