@@ -1,2 +1,2 @@
 # myFirstGame
-The game X or O
+The game Tic Tac Toe
