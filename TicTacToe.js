@@ -7,6 +7,7 @@ const selectWinnerBoxes = (b1, b2, b3) => {
 	turn.innerHTML = b1.innerHTML + " Won Congrat";
 	turn.style.fontSize = "40px";
 }
+
 const getWinner = () => {
 	let box1 = document.getElementById("box1"),
 		box2 = document.getElementById("box2"),
@@ -43,27 +44,23 @@ const getWinner = () => {
 		}
 }
 
-
 for(let i = 0; i < boxes.length; i++) {
-	boxes[i].onclick = () => {
+	boxes[i].onclick = function() {
 		if(this.innerHTML !== ("X") && this.innerHTML !== ("O")) {
-
-
-		if(X_or_O % 2 === 0) {
-			console.log(X_or_O);
-			this.innerHTML = "X";
-			turn.innerHTML = "O Turn Now";
-			getWinner();
-			X_or_O += 1;
-		} else {
-			console.log(X_or_O);
-			this.innerHTML = "O";
-			turn.innerHTML = "X Turn Now";
-			getWinner();
-			X_or_O += 1;
+			if(X_or_O % 2 === 0) {
+				console.log(X_or_O);
+				this.innerHTML = "X";
+				turn.innerHTML = "O Turn Now";
+				getWinner();
+				X_or_O += 1;
+			} else {
+				console.log(X_or_O);
+				this.innerHTML = "O";
+				turn.innerHTML = "X Turn Now";
+				getWinner();
+				X_or_O += 1;
+			}
 		}
-	}
-
 	};
 }
 
